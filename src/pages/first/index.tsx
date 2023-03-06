@@ -1,8 +1,18 @@
 import Link from "next/link";
 import Head from 'next/head'
-
+import axios from "axios";
+import { useState } from "react";
 
 export default function First() {
+  const [data, setData] = useState<string>("")
+
+  const fetchData = async () => {
+    if (!data) {
+      let res = await axios.get("/api/hello")
+      setData(res.data.name)
+    }
+  }
+
   return (
     <>
       <Head>
@@ -12,6 +22,8 @@ export default function First() {
       </Head>
       <h1>I exist as the first page</h1>
       <Link href="/">Click me</Link>
+      <button onClick={fetchData}>Send API request</button>
+      {data && <p>{data}</p>}
     </>
   )
 }
