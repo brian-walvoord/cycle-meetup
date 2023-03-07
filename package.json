@@ -6,13 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "cd db && npx knex migrate:latest",
+    "seed": "cd db && npx knex seed:run"
   },
   "dependencies": {
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "axios": "^1.3.4",
+    "dotenv": "^16.0.3",
     "knex": "^2.4.2",
     "next": "13.2.3",
     "pg": "^8.10.0",
