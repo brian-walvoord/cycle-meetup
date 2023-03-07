@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>I'm the homepage</h1>
+        <h1>I'm the initial loading page</h1>
         <div>
           <Link href="/first">Click me</Link>
         </div>
