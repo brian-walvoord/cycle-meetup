@@ -11,11 +11,17 @@ module.exports = {
       database: 'cycling_meetup',
       user: 'brian-walvoord',
       password: "MYPASSWORD"
+    },
+    migrations: {
+      directory: __dirname + '/migrations',
+    },
+    seeds: {
+      directory: __dirname + '/seeds'
     }
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: 'my_db',
       user:     'username',
