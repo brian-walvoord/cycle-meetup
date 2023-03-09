@@ -1,7 +1,21 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import axios from "axios";
 
 export default function Home() {
+
+  const getUsers = async () => {
+    //send api request
+    let res = await axios.get("/api/get-users")
+    //print the api response
+    console.log(JSON.stringify(res.data))
+  }
+
+  const addUser = async () => {
+    let res = await axios.post("/api/add-users")
+    console.log(res.data)
+  }
+
   return (
     <>
       <Head>
@@ -15,6 +29,8 @@ export default function Home() {
         <div>
           <Link href="/first">Click me</Link>
         </div>
+        <button onClick={getUsers}>Get Prisma Users</button>
+        <button onClick={addUser}>Add Prisma User</button>
       </main>
     </>
   )
