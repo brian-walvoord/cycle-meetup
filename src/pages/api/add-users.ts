@@ -39,11 +39,6 @@ const queryDB = async () => {
       },
     },
   })
-  const allUsers = await prisma.user.findMany({
-    include: {
-      posts: true,
-      profile: true,
-    },
-  })
+  const allUsers = await prisma.user.findMany()
   return allUsers;
 }

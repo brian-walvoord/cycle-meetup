@@ -13,7 +13,7 @@ export default function Home() {
 
   const addUser = async () => {
     let res = await axios.post("/api/add-users")
-    console.log(res.data)
+    console.log(JSON.stringify(res.data))
   }
 
   return (
