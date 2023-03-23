@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import axios from "axios";
 
+import ActiveAdventures from "../components/ActiveAdventures"
+import Navbar from "../components/Navbar"
+
 export default function Home() {
 
   const getUsers = async () => {
@@ -25,12 +28,14 @@ export default function Home() {
       </Head>
 
       <main>
+        <Navbar />
         <h1>I'm the initial loading page</h1>
         <div>
           <Link href="/first">Click me</Link>
         </div>
         <button onClick={getUsers}>Get Prisma Users</button>
         <button onClick={addUser}>Add Prisma User</button>
+        <ActiveAdventures />
       </main>
     </>
   )

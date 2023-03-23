@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from 'next/head'
 import axios from "axios";
+import Navbar from "../../components/Navbar";
 import { useState } from "react";
 
 export default function First() {
@@ -20,6 +21,8 @@ export default function First() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Navbar />
       <h1>I exist as the first page</h1>
       <Link href="/">Click me</Link>
       <button onClick={fetchData}>Send API request</button>
