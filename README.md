@@ -1,3 +1,5 @@
+This is a cycling meetup app to help cyclists organize meetups to go on cycling trips with others. I am using Next.js and TypeScript for this project and have it deployed on Vercel.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
